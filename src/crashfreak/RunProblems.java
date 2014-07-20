@@ -5,7 +5,7 @@ package crashfreak;
  */
 public class RunProblems {
 
-    private static int defaultStartingProblem = 9;
+    private static int defaultStartingProblem = 1;
     private static int defaultNumberOfProblems = 2000;
 
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class RunProblems {
                 try {
                     Class clazz = Class.forName(className);
                     EulerProblem ep = (EulerProblem) clazz.newInstance();
-                    ep.run();
+                    ep.timedRun();
                 } catch (ClassNotFoundException cnfe) {
                     System.out.println("No Problem " + i + " Skipping...");
                     break;
