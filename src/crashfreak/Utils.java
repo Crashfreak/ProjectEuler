@@ -6,7 +6,11 @@ package crashfreak;
 public class Utils {
 
     public static boolean isPrime(double value) {
-        for (double i = 2; i < value; i++) {
+        if (value == 2) {
+            return true;
+        }
+        Double midway = Math.sqrt(value);
+        for (double i = 2; i <= midway; i++) {
             if (value % i == 0) {
                 return false;
             }

@@ -5,19 +5,19 @@ package crashfreak;
  */
 public class RunProblems {
 
-    private static int defaultStartingProblem = 1;
-    private static int defaultNumberOfProblems = 2000;
+    private static int defaultStartingProblem = 11;
+    private static int defaultNumberOfProblems = 1;
 
     public static void main(String[] args) {
         try {
             int startingProblem = defaultStartingProblem;
-            int numProbs = defaultNumberOfProblems;
+            int numProbs = defaultStartingProblem + defaultNumberOfProblems;
             if (args.length > 1) {
                 startingProblem = Integer.parseInt(args[0]);
                 numProbs = Integer.parseInt(args[1]);
             }
 
-            for (int i = startingProblem; i <= numProbs; i++) {
+            for (int i = startingProblem; i < numProbs; i++) {
                 String className = "crashfreak.problems.Problem" + i;
                 try {
                     Class clazz = Class.forName(className);

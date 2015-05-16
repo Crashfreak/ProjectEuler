@@ -15,12 +15,14 @@ public class Problem4 extends EulerProblem {
     public void run() {
         int max = 0;
         int factor1 = 999;
+        // This is just a pure brute force attempt, I am sure it could be optimized
         do {
             for (int i = 999; i >= 100; i--) {
                 int palin = factor1 * i;
-                //System.out.println(factor1 + " * " + i + " = " + palin);
-                int reversePalin = Integer.parseInt(new StringBuilder(palin + "").reverse().toString());
-                if (palin == reversePalin && palin > max) {
+                String pStr = new StringBuilder(palin + "").reverse().toString();
+                int reversePalin = Integer.parseInt(pStr);
+                if (palin == reversePalin && palin > max && pStr.length() % 2 == 0) {
+                    System.out.println(factor1 + " * " + i + " = " + palin);
                     max = palin;
                 }
             }
