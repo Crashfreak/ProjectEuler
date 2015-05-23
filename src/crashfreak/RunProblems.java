@@ -5,7 +5,7 @@ package crashfreak;
  */
 public class RunProblems {
 
-    private static int defaultStartingProblem = 11;
+    private static int defaultStartingProblem = 15;
     private static int defaultNumberOfProblems = 1;
 
     public static void main(String[] args) {
