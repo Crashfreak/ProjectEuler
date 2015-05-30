@@ -63,6 +63,9 @@ public class Problem17 extends EulerProblem {
             currentVal += numbers.get(i);
         } else if (i >= 16 && i < 20) {
             currentVal += 4 + numbers.get(i % 10); // 4 for teen
+            if (i == 18) {
+                currentVal -= 1; // eight includes the t
+            }
         } else {
             int modVal = i % 10;
             debug.append("|Mod:" + modVal);
